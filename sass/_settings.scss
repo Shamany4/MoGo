@@ -1,0 +1,21 @@
+$active: #fce38a;
+$secondary: #f38181;
+$green: #95e1d3;
+$grey: #999999;
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+@mixin Kaushan {
+  font-family: 'Kaushan Script', cursive;
+}
+
+@mixin Roboto {
+  font-family: 'Roboto', sans-serif;
+}

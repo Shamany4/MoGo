@@ -1,0 +1,775 @@
+@import "_reset.sass"
+@import "_settings.scss"
+
+body
+  font-family: 'Montserrat', sans-serif
+
+// Header section
+.header-section
+  height: 100vh
+  min-height: 750px
+  background: $active url(../img/header-bg.jpg) no-repeat center center / cover
+.top-bar
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding-top: 40px
+.logo
+  &__span
+    font-size: 30px
+    font-weight: 700
+    color: #ffffff
+.menu
+  display: none
+  &__ul
+    display: flex
+  &__item
+    list-style: none
+    margin-left: 55px
+    position: relative
+    &:first-child
+      margin-left: 0px
+    &::after
+      content: ''
+      display: block
+      width: 70%
+      background: $active
+      height: 3px
+      transform: scaleX(0)
+      transition: all .5s
+      position: absolute
+      top: 24px
+      left: 15%
+    &:hover
+      &::after
+        transform: scaleX(1)
+        transition: all .5s
+    &:nth-child(6)
+      &::after
+        display: none
+    &:nth-child(7)
+      &::after
+        display: none
+  &__button
+    font-size: 14
+    text-transform: uppercase
+    color: #ffffff
+    text-decoration: none
+    transition: 0.3s
+    letter-spacing: 1px
+    &:hover
+      color: $active
+      transition: 0.3s
+// Hide menu
+
+.cta
+  margin-top: 100px
+  text-align: center
+  &__desc
+    +Kaushan
+    font-size: 72px
+    color: #ffffff
+  &__title
+    margin-top: 40px
+    font-size: 150px
+    font-weight: 700
+    text-transform: uppercase
+    color: #ffffff
+  &__row
+    display: block
+    width: 60px
+    height: 3px
+    background: #ffffff
+    margin: 50px auto 0 auto
+  &__button
+    display: flex
+    height: 40px
+    width: 160px
+    border: 3px solid #ffffff
+    text-decoration: none
+    text-transform: uppercase
+    color: #ffffff
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    font-size: 14px
+    letter-spacing: 1px
+    margin: 50px auto 0 auto
+    transition: all 0.3s
+    &:hover
+      background: #ffffff
+      color: #000000
+      transition: all 0.3s
+.bottom-bar
+  display: flex
+  justify-content: space-between
+  margin-top: 150px
+.progress
+  &-row_first
+    width: 280px
+    height: 3px
+    background: #ffffff
+    position: relative
+  &-row_two
+    position: absolute
+    top: 0
+    left: 0
+    height: 3px
+    width: 65%
+    background: #f38181
+    animation: changeWidth 2s ease-out
+    animation-iteration-count: 1
+  &-desc
+    margin-top: 25px
+    display: flex
+    align-items: flex-end
+    &__item
+      font-size: 24px
+      font-weight: 700
+      color: #ffffff
+    &__text
+      font-size: 18px
+      font-weight: 400
+      color: #ffffff
+      margin-left: 5px
+      text-transform: uppercase
+@keyframes changeWidth
+  0%
+    width: 0%
+  100%
+    width: 65%
+
+// About Section
+.about
+  &-card
+    margin-top: 100px
+    display: flex
+    justify-content: space-between
+.section-title
+  margin-top: 90px
+  display: flex
+  flex-direction: column
+  align-items: center
+  &__span
+    +Kaushan
+    font-size: 24px
+    color: #333333
+  &__text
+    font-size: 30px
+    color: #333333
+    font-weight: 700
+    text-transform: uppercase
+    margin-top: 23px
+  &__row
+    margin-top: 40px
+    width: 60px
+    height: 3px
+    background-color: #f38181
+  &__desc
+    font-size: 15px
+    +Roboto
+    color: $grey
+    text-align: center
+    margin-top: 47px
+    line-height: 24px
+.card
+  width: 380px
+  height: 250px
+  position: relative
+  transition: 0.3s
+  &:hover
+    box-shadow: 10px 10px 0 $green
+    transition: 0.3s
+    transform: translateX(-10px) translateY(-10px)
+    .card_hover
+      transform: scale(1)
+      transition: 0.3s
+  &_hover
+    position: absolute
+    display: block
+    top: 0
+    left: 0
+    transform: scale(0)
+    transition: 0.5s
+    z-index: 2
+    height: 100%
+    width: 100%
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%)
+    &-desc
+      z-index: 2
+      height: 100%
+      width: 100%
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__title
+        font-size: 18px
+        text-transform: uppercase
+        color: #ffffff
+        font-weight: 700
+        margin-top: 11px
+
+// Time Section
+.timelabs-section
+  margin-top: 110px
+  background: $green
+.time
+  display: flex
+  justify-content: space-between
+  &-desc
+    border-left: 1px solid rgba(255, 255, 255, 0.3)
+    text-align: center
+    width: 237px
+    height: 270px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &:last-child
+      border-right: 1px solid rgba(255, 255, 255, 0.3)
+    &__item
+      font-size: 72px
+      font-weight: 700
+      color: #ffffff
+    &__text
+      margin-top: 30px
+      font-size: 14px
+      color: #ffffff
+      text-transform: uppercase
+// Service Section
+.service-block
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  margin-top: 65px
+  &__row
+    width: 100%
+    height: 1px
+    background: #e5e5e5
+    margin-top: 50px
+    margin-bottom: 50px
+.service-card
+  display: flex
+  width: 350px
+  justify-content: space-between
+  &-desc
+    margin-left: 28px
+    display: flex
+    flex-direction: column
+    &__title
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 700
+    &__text
+      font-size: 15px
+      color: $grey
+      line-height: 24px
+      margin-top: 10px
+      width: 320px
+
+// Unique Section
+.section-title-img
+  padding-top: 100px
+.unique-section
+  height: auto
+  background: url(../img/unique-bg.jpg) no-repeat center center / cover
+.unique-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-top: 45px
+  position: relative
+  &-phone
+    position: absolute
+    bottom: -100px
+    right: 210px
+
+//Offer Section
+.offer
+  margin-top: 117px
+  display: flex
+.photography
+  margin-left: 30px
+  width: 600px
+  height: 60px
+  border: 1px solid #e5e5e5
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: relative
+  margin-bottom: 10px
+  &:hover
+    cursor: pointer
+  &-arrow
+    margin-right: 15px
+    font-size: 25px
+    color: #cccccc
+    display: block
+    transition: 0.2s
+    &_active
+      transform: rotate(180deg)
+      transition: 0.2s
+  &-logo
+    height: 60px
+    display: flex
+    align-items: center
+    margin-left: 15px
+    &__title
+      font-size: 14px
+      text-transform: uppercase
+      font-weight: 700
+      color: #333333
+      margin-left: 15px
+  &-hide
+    margin-left: 30px
+    display: none
+    border: 1px solid #e5e5e5
+    border-top: none
+    margin-bottom: 10px
+    margin-top: -10px
+    &__text
+      font-size: 15px
+      line-height: 24px
+      color: $grey
+      font-style: italic
+      padding: 30px 20px
+// Slaider Section
+.slaider-section
+  margin-top: 120px
+  height: 290px
+  display: flex
+  align-self: center
+  background: #f8f8f8
+.slaid
+  display: flex
+  justify-content: space-around
+  &:focus
+    outline: none
+  &-desc
+    display: flex
+    justify-content: center
+    align-items: center
+    &-images
+      margin-right: 60px
+      height: 150px
+      width: 150px
+      border: 1px solid $green
+      display: flex
+      justify-content: center
+      align-items: center
+    &-heading
+      display: flex
+      flex-direction: column
+      &__text
+        font-size: 24px
+        color: $grey
+        +Roboto
+        font-style: italic
+        line-height: 36px
+        width: 767px
+      &__name
+        margin-top: 20px
+        +Kaushan
+        font-size: 24px
+        color: #333333
+        display: flex
+        align-items: center
+        &::before
+          content: ''
+          margin-right: 10px
+          width: 60px
+          height: 3px
+          background: #f38181
+.slick-prev:before, .slick-next:before
+  color: $grey
+
+// Team Section
+.team-section
+  margin-top: 20px
+.team-block
+  margin-top: 90px
+  display: flex
+  justify-content: space-between
+.card-team
+  width: 380px
+  height: 470px
+.team-social
+  display: flex
+  &__btn
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 60px
+    width: 60px
+    background: #fce38a
+    color: #f38181
+    border: 1px solid #f38181
+    text-decoration: none
+    font-size: 22px
+    transition: 0.3s
+    &:nth-child(2)
+      border-left: 0
+      border-right: 0
+    &:nth-child(3)
+      border-right: 0
+    &:hover
+      background: #f38181
+      color: #fce38a
+      transition: 0.3s
+.team-heading
+  text-align: center
+  margin-top: 30px
+  &__title
+    font-size: 14px
+    text-transform: uppercase
+    color: #333333
+    font-weight: 700
+    margin-bottom: 10px
+  &__span
+    font-size: 15px
+    +Roboto
+    font-style: italicc
+    color: $grey
+
+// Partner Section
+.partner-section
+  margin-top: 200px
+  margin-bottom: 110px
+
+// Portfolio Section
+.work-block
+  margin-top: 100px
+  display: flex
+  overflow: hidden
+  &-left
+    display: flex
+    flex-direction: column
+    &_row
+      display: flex
+.work-card
+  width: 480px
+  height: 390px
+  position: relative
+  overflow: hidden
+  &:hover &_hover
+    transform: translateX(0)
+    transition: 0.3s
+  &_hover
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 100%
+    transform: translateX(-100%)
+    z-index: 1
+    transition: 0.3s
+    background: linear-gradient(to top, rgba(252, 227, 138, 0.9) 0%, rgba(243, 129, 129, 0.9) 100%)
+  &-desc
+    height: 100%
+    width: 100%
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    &__title
+      font-size: 14px
+      color: #ffffff
+      text-transform: uppercase
+      font-weight: 700
+      margin-top: 20px
+    &__span
+      font-size: 15px
+      +Roboto
+      font-style: italic
+      color: #ffffff
+      margin-top: 17px
+      font-weight: 400
+  &-big
+    height: 780px
+
+// Slaider Section
+.slaid-desc-images-man
+  border: none
+  height: auto
+  width: auto
+
+// Clients Section
+.client-section
+  background: url(../img/people-bg.jpg) no-repeat center center / cover
+  height: 830px
+.client-block
+  margin-top: 90px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+.client-card
+  display: flex
+  margin-bottom: 70px
+  &-desc
+    margin-top: 12px
+    margin-left: 30px
+    &__title
+      font-size: 14px
+      text-transform: uppercase
+      color: #333333
+      font-weight: 700
+    &__span
+      font-size: 15px
+      margin-top: 15px
+      color: #333333
+      +Roboto
+      font-style: italic
+      display: flex
+      flex-direction: column
+      &::after
+        content: ''
+        margin-top: 17px
+        display: block
+        width: 60px
+        height: 3px
+        background: #f38181
+    &__text
+      font-size: 15px
+      color: $grey
+      line-height: 24px
+      margin-top: 24px
+      width: 420px
+
+// Blog Section
+.blog-block
+  margin-top: 50px
+  display: flex
+  justify-content: space-between
+.blog-card
+  width: 380px
+  display: flex
+  flex-direction: column
+  height: auto
+  &-images
+    position: relative
+    &-optional
+      position: absolute
+      bottom: 20px
+      left: -20px
+      width: 60px
+      height: 70px
+      background: $green
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      &__span
+        font-size: 30px
+        font-weight: 700
+        color: #ffffff
+      &__text
+        font-size: 15px
+        +Roboto
+        font-style: italic
+        color: #ffffff
+  &-desc
+    display: flex
+    flex-direction: column
+    &__title
+      font-size: 14px
+      color: #333333
+      text-transform: uppercase
+      font-weight: 700
+      margin-top: 20px
+    &__text
+      width: 350px
+      margin-top: 20px
+      font-size: 15px
+      color: $grey
+      line-height: 24px
+    &__row
+      width: 100%
+      height: 1px
+      background: #e5e5e5
+      margin-top: 20px
+    &-social
+      margin-top: 20px
+      display: flex
+      align-items: center
+      &__icon
+        color: $green
+        font-size: 20px
+      &__view
+        font-size: 15px
+        color: $grey
+        +Roboto
+        margin-left: 10px
+        margin-right: 15px
+
+// Map Section
+.map-section
+  margin-top: 120px
+  height: 200px
+  background: url(../img/map-bg.jpg) no-repeat center center / cover
+  display: flex
+  align-items: center
+  justify-content: center
+.map
+  display: flex
+  flex-direction: column
+  align-items: center
+  color: #f38181
+  &__icon
+    font-size: 25px
+  &__text
+    font-size: 24px
+    text-transform: uppercase
+    margin-top: 20px
+    font-weight: 700
+    display: flex
+    align-items: center
+    flex-direction: column
+    &::after
+      content: ''
+      margin-top: 20px
+      display: block
+      width: 60px
+      height: 3px
+      background: #f38181
+
+// Footer Section
+.footer-section
+  margin-bottom: 50px
+.footer
+  margin-top: 70px
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &-mob
+    display: flex
+    justify-content: space-around
+  &-desc
+    width: auto
+    height: 350px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-logo
+      &__span
+        font-size: 46px
+        color: #cccccc
+        font-weight: 700
+    &-text
+      font-size: 15px
+      line-height: 24px
+      width: 462px
+      +Roboto
+      color: $grey
+    &-follow
+      &__title
+        font-size: 14px
+        color: #333333
+        span
+          font-weight: 700
+          font-size: 18px
+          margin-right: 5px
+      &__row
+        display: block
+        width: 100%
+        height: 1px
+        background-color: #e5e5e5
+        margin-top: 18px
+        margin-bottom: 18px
+      &-social
+        display: flex
+        flex-direction: row
+        align-items: center
+        &__title
+          font-size: 15px
+          +Roboto
+          color: $grey
+          font-style: italic
+        &__btn
+          font-size: 20px
+          color: $green
+          margin-left: 18px
+          transition: 0.2s
+          &:hover
+            color: $active
+            transition: 0.2s
+    &-feedback
+      margin-top: 40px
+      display: flex
+      flex-direction: row
+      &__input
+        width: 230px
+        height: 40px
+        font-size: 15px
+        box-sizing: border-box
+        padding-left: 15px
+        +Roboto
+        font-style: italic
+        border: 1px solid #e7e7e7
+        color: #cccccc
+        &:focus
+          outline: none
+      &__btn
+        width: 150px
+        height: 41px
+        background: $green
+        border: none
+        transition: 0.3s
+        margin-left: -5px
+        &:focus
+          outline: none
+        &:hover
+          background: $active
+          transition: 0.3s
+  &-blog
+    height: 350px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-title
+      font-size: 16px
+      text-transform: uppercase
+      color: #333333
+      font-weight: 700
+    &-card
+      display: flex
+      flex-direction: row
+      &-desc
+        margin-left: 20px
+        display: flex
+        flex-direction: column
+        justify-content: center
+        &__title
+          font-size: 13px
+          text-transform: uppercase
+          line-height: 18px
+          width: 230px
+          color: #333333
+          font-weight: 700
+        &__text
+          font-size: 13px
+          +Roboto
+          color: $grey
+          margin-top: 10px
+          font-style: italic
+  &-inst
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    &-card
+      width: 270px
+      display: flex
+      flex-wrap: wrap
+      &__item
+        margin-left: 2px
+        margin-top: 2px
+    &__btn
+      font-size: 15px
+      +Roboto
+      font-style: italic
+      color: #333333
+      text-decoration: none
+
+// Media queries
+@import "_media.sass"
